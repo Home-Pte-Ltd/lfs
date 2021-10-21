@@ -1,5 +1,9 @@
 # lfs
 
+## Find out what files are under LFS
+- do a search in folder for .gitattributes
+- or do git lfs ls-files
+
 
 ## add files to LFS
 https://stackoverflow.com/questions/54451856/how-can-i-tell-if-a-file-will-be-uploaded-to-git-lfs-correctly
@@ -13,7 +17,7 @@ https://stackoverflow.com/questions/54451856/how-can-i-tell-if-a-file-will-be-up
 5. view lfs files
 - git lfs ls-files
 
-# remove files from LFS
+## remove files from LFS
 1. remove what ever extension or files that was previously tracked as LFS file in .gitattritbutes
 2. view "changed files from LFS to normal files". git lfs status
 3. git add, commit and push to git server
