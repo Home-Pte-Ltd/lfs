@@ -2,6 +2,7 @@
 
 
 ## add files to LFS
+https://stackoverflow.com/questions/54451856/how-can-i-tell-if-a-file-will-be-uploaded-to-git-lfs-correctly
 1. go to repo and do git lfs install
 2. add files to lfs
 - git lfs track "*.png" for example to track all files with extension of .png
