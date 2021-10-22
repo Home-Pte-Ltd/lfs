@@ -18,22 +18,22 @@ https://stackoverflow.com/questions/54451856/how-can-i-tell-if-a-file-will-be-up
 - git lfs ls-files
 
 ## remove files from LFS
-remove hooks
+- remove hooks
 git lfs uninstall
-remove lfs stuff from .gitattributes
-list lfs files using
+- remove lfs stuff from .gitattributes
+- list lfs files using
 git lfs ls-files | sed -r 's/^.{13}//' > files.txt
-run git rm --cached for each file
+- run git rm --cached for each file
 while read line; do git rm --cached "$line"; done < files.txt
-run git add for each file
+- run git add for each file
 while read line; do git add "$line"; done < files.txt
-commit everything
+- commit everything
 git add .gitattributes
 git commit -m "unlfs"
 git push origin
-check that no lfs files left
+- check that no lfs files left
 git lfs ls-files
-remove junk
+- remove junk
 rm -rf .git/lfs
 
 
