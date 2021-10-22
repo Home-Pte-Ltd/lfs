@@ -18,12 +18,24 @@ https://stackoverflow.com/questions/54451856/how-can-i-tell-if-a-file-will-be-up
 - git lfs ls-files
 
 ## remove files from LFS
-1. remove what ever extension or files that was previously tracked as LFS file in .gitattritbutes
-or do git lfs untrack '*.png'. it should also remove from .gitattributes
-2. do git rm --cached '*.png'
-3. view "changed files from LFS to normal files". git lfs status
-4. git add, commit and push to git server
-- You can check in Github, the files are not stored in Github LFS server. 
+remove hooks
+git lfs uninstall
+remove lfs stuff from .gitattributes
+list lfs files using
+git lfs ls-files | sed -r 's/^.{13}//' > files.txt
+run git rm --cached for each file
+while read line; do git rm --cached "$line"; done < files.txt
+run git add for each file
+while read line; do git add "$line"; done < files.txt
+commit everything
+git add .gitattributes
+git commit -m "unlfs"
+git push origin
+check that no lfs files left
+git lfs ls-files
+remove junk
+rm -rf .git/lfs
 
 
 https://stackoverflow.com/questions/35011366/move-git-lfs-tracked-files-under-regular-git
+https://github.com/git-lfs/git-lfs/issues/3026
