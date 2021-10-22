@@ -19,6 +19,11 @@ https://stackoverflow.com/questions/54451856/how-can-i-tell-if-a-file-will-be-up
 
 ## remove files from LFS
 1. remove what ever extension or files that was previously tracked as LFS file in .gitattritbutes
-2. view "changed files from LFS to normal files". git lfs status
-3. git add, commit and push to git server
+or do git lfs untrack '*.png'. it should also remove from .gitattributes
+2. do git rm --cached '*.png'
+3. view "changed files from LFS to normal files". git lfs status
+4. git add, commit and push to git server
 - You can check in Github, the files are not stored in Github LFS server. 
+
+
+https://stackoverflow.com/questions/35011366/move-git-lfs-tracked-files-under-regular-git
