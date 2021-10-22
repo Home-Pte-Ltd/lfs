@@ -1,2 +1,0 @@
-files-lfs/git-lfs-overview.png
-files-lfs/lfs-getting-started.png
