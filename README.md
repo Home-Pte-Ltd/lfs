@@ -1,11 +1,11 @@
-# lfs
+# Large File System
 
 ## Find out what files are under LFS
 - do a search in folder for .gitattributes
 - or do git lfs ls-files
 
 
-## add files to LFS
+## Add files to LFS
 https://stackoverflow.com/questions/54451856/how-can-i-tell-if-a-file-will-be-uploaded-to-git-lfs-correctly
 1. go to repo and do 
 ```bash
@@ -28,7 +28,7 @@ git lfs status
 git lfs ls-files
 ```
 
-## remove files from LFS
+## Remove files from LFS
 - remove hooks
 ```bash
 git lfs uninstall
